@@ -11,4 +11,4 @@ function showSearchResult() {
     search_div.style.display = "none";
     //document.querySelector("#main").classList = "main";
 }
-//showSearchResult();
+showSearchResult();
