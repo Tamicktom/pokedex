@@ -14,14 +14,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script defer src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
   <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/style.js"></script>
   <link rel="stylesheet" href="css/style.css" />
   <title>Pokédex</title>
 </head>
 
 <body>
-  <p>Digite o nome do Pokémon: <input type="text" id="pkm_name"></p>
-  <button id="btn_search_pkm">Buscar Pokémon</button>
-  <p id="pkm_name_show"></p>
+
+  <div class="screen">
+    <div id="search_div" class="search_div">
+      <h1 class="pokedex_tittle_big">Pokédex</h1>
+      <div class="w-100">
+        <p>Digite o nome do Pokémon</p>
+        <p id="show_error"></p>
+        <input type="text" id="pkm_name">
+        <button id="btn_search_pkm" onclick="">Buscar Pokémon</button>
+      </div>
+    </div>
+    <div id="main" class="main invisible">
+      <div class="main-left">
+        <p id="pkm_name_show">Charmander <span id="pkm_id_show">N° 004</span></p>
+      </div>
+      <div class="main-right">
+        <img id="pkm_img_show" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="" id="pkm_img">
+      </div>
+    </div>
+  </div>
+
+
 </body>
 
 </html>
