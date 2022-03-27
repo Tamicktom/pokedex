@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI,CAAC;EACD,UAAU,EDDH,OAAmB;CCE7B",
+    "sources": [
+        "style.scss",
+        "scss/global.scss",
+        "scss/responsive.scss",
+        "scss/custom.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
