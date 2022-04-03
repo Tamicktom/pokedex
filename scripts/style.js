@@ -27,10 +27,13 @@ function updatePkmTypeColors() {
     keys.forEach((key) => {
         if (key.toLowerCase() == type1.innerHTML.toLowerCase())
             document.documentElement.style.setProperty('--pokemon-color-theme', pkm_types_colors[key]);
-
         if (key.toLowerCase() == type2.innerHTML.toLowerCase())
             document.documentElement.style.setProperty('--pokemon-color-theme2', pkm_types_colors[key]);
+
     });
+    if (type2.innerHTML.toLowerCase() == '') {
+        document.documentElement.style.setProperty('--pokemon-color-theme2', '--pokemon-color-theme');
+    }
 }
 
 function showSearchResult() {
@@ -46,5 +49,5 @@ function showSearchResult() {
     search_div.style.display = "none";
 }
 
-// showSearchResult();
-// updatePkmTypeColors();
+showSearchResult();
+updatePkmTypeColors();
