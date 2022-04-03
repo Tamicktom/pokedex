@@ -1,37 +1,35 @@
-const pkm_types_colors = {
-    "Normal": "rgb(169, 168, 112)",
-    "Lutador": "rgb(191, 50, 32)",
-    "Voador": "rgb(169, 142, 247)",
-    "Venenoso": "rgb(159, 64, 168)",
-    "Terrestre": "rgb(224, 193, 87)",
-    "Pedra": "rgb(185, 160, 18)",
-    "Inseto": "rgb(169, 185, 0)",
-    "Fantasma": "rgb(113, 87, 160)",
-    "Metal": "rgb(184, 184, 212)",
-    "Fogo": "rgb(240, 127, 5)",
-    "Água": "rgb(102, 143, 248)",
-    "Grama": "rgb(123, 199, 51)",
-    "Elétrico": "rgb(247, 209, 0)",
-    "Psiquico": "rgb(247, 89, 137)",
-    "Gelo": "rgb(154, 215, 216)",
-    "Dragão": "rgb(109, 52, 255)",
-    "Trevas": "rgb(113, 87, 70)",
-    "Fada": "rgb(232, 179, 232)",
-    "Desconhecido": "rgb(27, 148, 129)",
-    "Sombras": "rgb(50, 0, 145)"
-};
-
 function updatePkmTypeColors() {
+    const pkm_types_colors = {
+        "Normal": "var(--Normal)",
+        "Lutador": "var(--Lutador)",
+        "Voador": "var(--Voador)",
+        "Venenoso": "var(--Venenoso)",
+        "Terrestre": "var(--Terrestre)",
+        "Pedra": "var(--Pedra)",
+        "Inseto": "var(--Inseto)",
+        "Fantasma": "var(--Fantasma)",
+        "Metal": "var(--Metal)",
+        "Fogo": "var(--Fogo)",
+        "Água": "var(--Água)",
+        "Grama": "var(--Grama)",
+        "Elétrico": "var(--Elétrico)",
+        "Psiquico": "var(--Psiquico)",
+        "Gelo": "var(--Gelo)",
+        "Dragão": "var(--Dragão)",
+        "Trevas": "var(--Trevas)",
+        "Fada": "var(--Fada)",
+        "Desconhecido": "var(--Desconhecido)",
+        "Sombras": "var(--Sombras)"
+    };
     const type1 = document.querySelector("#pkm_type1");
     const type2 = document.querySelector("#pkm_type2");
-    console.log(pkm_types_colors);
-
     const keys = Object.keys(pkm_types_colors);
     keys.forEach((key) => {
         if (key.toLowerCase() == type1.innerHTML.toLowerCase())
-            type1.style.backgroundColor = pkm_types_colors[key];
+            document.documentElement.style.setProperty('--pokemon-color-theme', pkm_types_colors[key]);
+
         if (key.toLowerCase() == type2.innerHTML.toLowerCase())
-            type2.style.backgroundColor = pkm_types_colors[key];
+            document.documentElement.style.setProperty('--pokemon-color-theme2', pkm_types_colors[key]);
     });
 }
 
@@ -48,7 +46,5 @@ function showSearchResult() {
     search_div.style.display = "none";
 }
 
-showSearchResult();
-updatePkmTypeColors();
-
-
+// showSearchResult();
+// updatePkmTypeColors();

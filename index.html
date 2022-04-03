@@ -28,21 +28,32 @@
         <p>Digite o nome do Pokémon</p>
         <p id="show_error"></p>
         <input type="text" id="pkm_name">
-        <button id="btn_search_pkm" onclick="">Buscar Pokémon</button>
+        <button id="btn_search_pkm" onclick="SearchPkmName()">Buscar Pokémon</button>
       </div>
     </div>
 
     <!--* depois de pesquisar -->
     <div id="main" class="main invisible">
-      <div class="main-left">
-        <p id="pkm_name_show">Charmander <span id="pkm_id_show">N° 004</span></p>
-        <div class="w-100">
+
+      <div class="main-left w-50">
+        <div class="pkm_name-id mt-25">
+          <p id="pkm_name_show">Charmander</p>
+          <p id="pkm_id_show">N° 004</p>
+        </div>
+        <div class="w-100 flex-center mt-15">
           <span id="pkm_type1">Fogo</span>
           <span id="pkm_type2">Normal</span>
         </div>
+        <div class="flex-center w-100">
+          <p id="pkm_description" class="mt-25 w-75">
+            The fire on the tip of its tail is a measure of its life. If the pokemon is healthy, its tail burns
+            intensely.
+          </p>
+        </div>
       </div>
 
-      <div class="main-right">
+      <!--* direita -->
+      <div class="main-right w-50">
         <img id="pkm_img_show" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt=""
           id="pkm_img">
       </div>

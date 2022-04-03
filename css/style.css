@@ -1,5 +1,43 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+:root {
+  --Normal: rgb(169, 168, 112);
+  --Lutador: rgb(191, 50, 32);
+  --Voador: rgb(169, 142, 247);
+  --Venenoso: rgb(159, 64, 168);
+  --Terrestre: rgb(224, 193, 87);
+  --Pedra: rgb(185, 160, 18);
+  --Inseto: rgb(169, 185, 0);
+  --Fantasma: rgb(113, 87, 160);
+  --Metal: rgb(184, 184, 212);
+  --Fogo: rgb(240, 127, 5);
+  --Água: rgb(102, 143, 248);
+  --Grama: rgb(123, 199, 51);
+  --Elétrico: rgb(247, 209, 0);
+  --Psiquico: rgb(247, 89, 137);
+  --Gelo: rgb(154, 215, 216);
+  --Dragão: rgb(109, 52, 255);
+  --Trevas: rgb(113, 87, 70);
+  --Fada: rgb(232, 179, 232);
+  --Desconhecido: rgb(27, 148, 129);
+  --Sombras: rgb(50, 0, 145);
+  --pokemon-color-theme: --Desconhecido;
+  --pokemon-color-theme2: --Desconhecido;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -54,12 +92,28 @@ body {
   width: 100%;
 }
 
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
 .h-100 {
   height: 100%;
 }
 
 .h-10 {
   height: 10%;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-25 {
+  margin-top: 25px;
 }
 
 @media (min-width: 0px) {
@@ -224,18 +278,70 @@ body {
 }
 
 .main-left {
-  width: 50%;
   height: 100%;
 }
 
+.main-left .pkm_name-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-left #pkm_type1 {
+  background: var(--pokemon-color-theme);
+  width: 25%;
+}
+
+.main-left #pkm_type2 {
+  background: var(--pokemon-color-theme2);
+  width: 25%;
+}
+
+.main-left #pkm_name_show {
+  width: 70%;
+  font-size: 3.3em;
+  font-family: "Bebas Neue", cursive;
+  color: var(--pokemon-color-theme);
+}
+
+.main-left #pkm_id_show {
+  width: 30%;
+  font-size: 3.3em;
+  font-family: "Bebas Neue", cursive;
+  color: var(--pokemon-color-theme);
+}
+
+.main-left #pkm_description {
+  font-size: 1.3em;
+}
+
 .main-right {
-  width: 50%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .main-right #pkm_img_show {
   width: 150px;
   height: 150px;
+  border: 1px solid #d80d42;
 }
 
 .pokedex_tittle_big {
