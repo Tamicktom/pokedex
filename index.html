@@ -3,71 +3,86 @@
 <!--
     Pokédex made with web technologies and using pokeAPI. 
     Authors: Tamicktom and Dekie
-    Version: dev 0.0.1
+    Version: dev 0.0.5
 -->
 
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://unpkg.com/react@17/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"
+    ></script>
+    <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/style.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Pokédex</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script defer src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
-  <script defer src="scripts/main.js"></script>
-  <script defer src="scripts/style.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Pokédex</title>
-</head>
+  <body>
+    <div class="screen">
+      <div id="search_div" class="search_div">
+        <h1 class="pokedex_tittle_big">Pokédex</h1>
+        <div class="w-100">
+          <p>Digite o nome do Pokémon</p>
+          <p id="show_error"></p>
+          <input type="text" id="pkm_name" />
+          <button id="btn_search_pkm" onclick="SearchPkmName()">
+            Buscar Pokémon
+          </button>
+        </div>
+      </div>
 
-<body>
+      <!--* depois de pesquisar -->
+      <div id="main" class="main invisible">
+        <div class="main-left w-50">
+          <!-- Mostrar nome e número do Pokémon-->
+          <div class="pkm_name-id mt-25">
+            <p id="pkm_name_show">Charmander</p>
+            <p id="pkm_id_show">N° 004</p>
+          </div>
+          <!-- Mostrar tipo -->
+          <div class="w-100 flex-center mt-15">
+            <span id="pkm_type1">Fogo</span>
+            <span id="pkm_type2">Normal</span>
+          </div>
+          <!-- Descrição dentro da Pokédex -->
+          <div class="flex-center w-100 mt-15">
+            <p id="pkm_description" class="mt-25 w-75">
+              The fire on the tip of its tail is a measure of its life. If the
+              pokemon is healthy, its tail burns intensely.
+            </p>
+          </div>
+          <!-- Habilidades do Pokémon -->
+          <div id="habilities_box" class="w-50 mt-15">
+            <h2 class="w-100">Habilidades</h2>
+            <p id="pkm_ability1" class="w-100">Blaze</p>
+            <p id="pkm_ability2" class="w-100 hidden">Solar Power</p>
+          </div>
+        </div>
 
-  <div class="screen">
-    <div id="search_div" class="search_div">
-      <h1 class="pokedex_tittle_big">Pokédex</h1>
-      <div class="w-100">
-        <p>Digite o nome do Pokémon</p>
-        <p id="show_error"></p>
-        <input type="text" id="pkm_name">
-        <button id="btn_search_pkm" onclick="SearchPkmName()">Buscar Pokémon</button>
+        <!--* direita -->
+        <div class="main-right w-50">
+          <img
+            id="pkm_img_show"
+            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+            alt=""
+            id="pkm_img"
+          />
+        </div>
       </div>
     </div>
-
-    <!--* depois de pesquisar -->
-    <div id="main" class="main invisible">
-
-      <div class="main-left w-50">
-        <div class="pkm_name-id mt-25">
-          <p id="pkm_name_show">Charmander</p>
-          <p id="pkm_id_show">N° 004</p>
-        </div>
-        <div class="w-100 flex-center mt-15">
-          <span id="pkm_type1">Fogo</span>
-          <span id="pkm_type2">Normal</span>
-        </div>
-        <div class="flex-center w-100 mt-15">
-          <p id="pkm_description" class="mt-25 w-75">
-            The fire on the tip of its tail is a measure of its life. If the pokemon is healthy, its tail burns
-            intensely.
-          </p>
-        </div>
-        <div id="habilities_box" class="w-50 mt-15">
-          <h2 class="w-100">Habilidades</h2>
-          <p id="pkm_ability1" class="w-100">Blaze</p>
-          <p id="pkm_ability2" class="w-100 hidden">Solar Power</p>
-        </div>
-      </div>
-
-      <!--* direita -->
-      <div class="main-right w-50">
-        <img id="pkm_img_show" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt=""
-          id="pkm_img">
-      </div>
-
-
-    </div>
-  </div>
-
-
-</body>
-
+  </body>
 </html>
