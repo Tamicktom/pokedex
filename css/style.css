@@ -352,6 +352,17 @@ body {
   border: 1px solid #d80d42;
 }
 
+.main-right #status_box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-right #status_box div {
+  width: 50%;
+}
+
 .pokedex_tittle_big {
   color: #d80d42;
   font-size: 4em;
