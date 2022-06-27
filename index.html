@@ -12,8 +12,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script defer src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
-  <script defer src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
   <script defer src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
   <script defer src="scripts/main.js"></script>
   <script defer src="scripts/style.js"></script>
@@ -55,17 +53,28 @@
             pokemon is healthy, its tail burns intensely.
           </p>
         </div>
-        <!-- Habilidades do Pokémon -->
-        <div id="habilities_box" class="w-50 mt-15">
-          <h2 class="w-100">Habilidades</h2>
-          <p id="pkm_ability1" class="w-100">Blaze</p>
-          <p id="pkm_ability2" class="w-100 hidden">Solar Power</p>
+        <!-- Habilidades, peso, altura do Pokémon -->
+        <div class="w-100 flex-center mt-15">
+          <div id="habilities_box" class="w-50">
+            <h2 class="w-100">Habilidades</h2>
+            <p id="pkm_ability1" class="w-100">Blaze</p>
+            <p id="pkm_ability2" class="w-100 hidden">Solar Power</p>
+          </div>
+          <div class="w-50 flex-column">
+            <h2 class="w-100">Outras informações</h2>
+            <div class="w-50">
+              <p>Peso: <span id="pkm_weight">1,5kg</span></p>
+            </div>
+            <div class="w-50">
+              <p>Altura: <span id="pkm_height">1m</span></p>
+            </div>
+          </div>
         </div>
         <!-- status -->
-        <div id="status_box" class="w-100 mt-15 flex-center">
+        <div id="status_box" class="w-100 mt-15 flex-column">
           <h2 class="w-100">Status</h2>
-          <div class="w-100">
-            <div class="w-100">
+          <div class="w-100 flex-row">
+            <div class="w-50">
               <h3>BASE</h3>
               <p>HP: <span id="pkm_status_base_hp">60</span></p>
               <p>ATK: <span id="pkm_status_base_atk">60</span></p>
@@ -74,7 +83,7 @@
               <p>SPD: <span id="pkm_status_base_spd">40</span></p>
               <p>SPE: <span id="pkm_status_base_spe">50</span></p>
             </div>
-            <div class="w-100">
+            <div class="w-50">
               <h3>MAX</h3>
               <p>HP: <span id="pkm_status_max_hp">60</span></p>
               <p>ATK: <span id="pkm_status_max_akt">60</span></p>
@@ -106,20 +115,6 @@
               <a href="#">
                 <img id="pkm_evolution_2_img" src="" alt="">
               </a>
-            </div>
-          </div>
-        </div>
-        <!-- outros -->
-        <div class="w-100">
-          <h2>Outras informações</h2>
-          <div class="w-100">
-            <div class="w-50">
-              <h2>Peso</h2>
-              <p id="pkm_weight">1,5kg</p>
-            </div>
-            <div class="w-50">
-              <h2>Altura</h2>
-              <p id="pkm_height">1m</p>
             </div>
           </div>
         </div>

@@ -49,5 +49,9 @@ function showSearchResult() {
     search_div.style.display = "none";
 }
 
+
 showSearchResult();
 updatePkmTypeColors();
+let document_Style = getComputedStyle(document.documentElement);
+let myVal = document_Style.getPropertyValue('--Dragão');
+console.log(myVal);
