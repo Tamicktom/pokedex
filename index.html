@@ -20,113 +20,102 @@
 </head>
 
 <body>
-  <div class="screen">
-    <div id="search_div" class="search_div">
-      <h1 class="pokedex_tittle_big">Pokédex</h1>
-      <div class="w-100">
-        <p>Digite o nome do Pokémon</p>
-        <p id="show_error"></p>
-        <input type="text" id="pkm_name" />
-        <button id="btn_search_pkm" onclick="SearchPkmName()">
-          Buscar Pokémon
-        </button>
-      </div>
-    </div>
-
-    <!--* depois de pesquisar -->
-    <div id="main" class="main invisible">
-      <div class="main-left w-50">
-        <!-- Mostrar nome e número do Pokémon-->
-        <div class="pkm_name-id mt-25">
-          <p id="pkm_name_show">Charmander</p>
-          <p id="pkm_id_show">N° 004</p>
-        </div>
-        <!-- Mostrar tipo -->
-        <div class="w-100 flex-center mt-15">
-          <span id="pkm_type1">Fogo</span>
-          <span id="pkm_type2">Normal</span>
-        </div>
-        <!-- Descrição dentro da Pokédex -->
-        <div class="flex-center w-100 mt-15">
-          <p id="pkm_description" class="mt-25 w-75">
-            The fire on the tip of its tail is a measure of its life. If the
-            pokemon is healthy, its tail burns intensely.
-          </p>
-        </div>
-        <!-- Habilidades, peso, altura do Pokémon -->
-        <div class="w-100 flex-center mt-15">
-          <div id="habilities_box" class="w-50">
-            <h2 class="w-100">Habilidades</h2>
-            <p id="pkm_ability1" class="w-100">Blaze</p>
-            <p id="pkm_ability2" class="w-100 hidden">Solar Power</p>
-          </div>
-          <div class="w-50 flex-column">
-            <h2 class="w-100">Outras informações</h2>
-            <div class="w-50">
-              <p>Peso: <span id="pkm_weight">1,5kg</span></p>
-            </div>
-            <div class="w-50">
-              <p>Altura: <span id="pkm_height">1m</span></p>
-            </div>
-          </div>
-        </div>
-        <!-- status -->
-        <div id="status_box" class="w-100 mt-15 flex-column">
-          <h2 class="w-100">Status</h2>
-          <div class="w-100 flex-row">
-            <div class="w-50">
-              <h3>BASE</h3>
-              <p>HP: <span id="pkm_status_base_hp">60</span></p>
-              <p>ATK: <span id="pkm_status_base_atk">60</span></p>
-              <p>DEF: <span id="pkm_status_base_def">50</span></p>
-              <p>SPA: <span id="pkm_status_base_spa">30</span></p>
-              <p>SPD: <span id="pkm_status_base_spd">40</span></p>
-              <p>SPE: <span id="pkm_status_base_spe">50</span></p>
-            </div>
-            <div class="w-50">
-              <h3>MAX</h3>
-              <p>HP: <span id="pkm_status_max_hp">60</span></p>
-              <p>ATK: <span id="pkm_status_max_akt">60</span></p>
-              <p>DEF: <span id="pkm_status_max_def">50</span></p>
-              <p>SPA: <span id="pkm_status_max_spa">30</span></p>
-              <p>SPD: <span id="pkm_status_max_spd">40</span></p>
-              <p>SPE: <span id="pkm_status_max_spe">50</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--* direita -->
-      <div class="main-right w-50">
-        <img id="pkm_img_show" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt=""
-          id="pkm_img" />
-        <!-- grade evolutiva -->
-        <div id="evolutions_box">
-          <h2>Grade evolutiva</h2>
-          <div class="w-100">
-            <div class="w-50">
-              <h2 id="pkm_evolution_1_name">?</h2>
-              <a href="#">
-                <img id="pkm_evolution_1_img" src="" alt="">
-              </a>
-            </div>
-            <div class="w-50">
-              <h2 id="pkm_evolution_2_name">chari</h2>
-              <a href="#">
-                <img id="pkm_evolution_2_img" src="" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- mega evolução -->
-        <div class="w-100">
-          <h2>Mega Evolução</h2>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
+  <div class="top">
+    <div class="gem">
+      <div class="sub_gem"></div>
     </div>
   </div>
+  <main>
+
+    <div class="w-100">
+      <div class="screen_holder">
+        <div class="screen">
+          <div class="left">
+            <img src="" id="pkm_img">
+          </div>
+          <div class="right">
+            <ul>
+              <li id="pkm_name"></li>
+              <li id="pkm_id"></li>
+              <li id="pkm_type"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="search">
+      <label for="pkm_search_input">Digite o nome/id do Pokémon</label>
+      <input type="text" id="pkm_search_input">
+      <button id="pkm_search_button">Pesquisar</button>
+    </div>
+
+    <div class="numerals_holder">
+      <div class="numerals">
+        <div class="up">
+          <button id="t9_1">
+            <span class="number">1</span>
+            <span class="t9_options">_?!</span>
+          </button>
+          <button id="t9_2">
+            <span class="number">2</span>
+            <span class="t9_options">ABC</span>
+          </button>
+          <button id="t9_3">
+            <span class="number">3</span>
+            <span class="t9_options">DEF</span>
+          </button>
+          <button id="t9_4">
+            <span class="number">4</span>
+            <span class="t9_options">GHI</span>
+          </button>
+          <button id="t9_5">
+            <span class="number">5</span>
+            <span class="t9_options">JKL</span>
+          </button>
+        </div>
+        <div class="down">
+          <button id="t9_6">
+            <span class="number">6</span>
+            <span class="t9_options">MNO</span>
+          </button>
+          <button id="t9_7">
+            <span class="number">7</span>
+            <span class="t9_options">PQRS</span>
+          </button>
+          <button id="t9_8">
+            <span class="number">8</span>
+            <span class="t9_options">TUV</span>
+          </button>
+          <button id="t9_9">
+            <span class="number">9</span>
+            <span class="t9_options">WXYZ</span>
+          </button>
+          <button id="t9_0">
+            <span class="number">0</span>
+            <span class="t9_options">-</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons_holder">
+      <div class="left">
+        <div class="left_left">
+          <button>A</button>
+        </div>
+        <div class="left_right">
+          <button>B</button>
+        </div>
+      </div>
+      <div class="right">
+
+      </div>
+    </div>
+  </main>
+
+
+
 </body>
 
 </html>
