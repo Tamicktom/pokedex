@@ -1,5 +1,5 @@
-function loadpkm() {
-    let url = "https://pokeapi.co/api/v2/pokemon/600/";
+function loadpkm(name) {
+    let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
     fetch(url)
         .then((response) => {
             return response.json();
@@ -12,11 +12,14 @@ function loadpkm() {
             document.getElementById("pkm_img").src = img;
         })
         .catch((erro) => {
-            console.log(erro)
+            alert(`${name} é inválido`);
         })
 
-    console.clear();
+}
+function SearchPkmByName(){
+   const pkmName = document.getElementById("pkm_search_input").value.toLowerCase();
+   loadpkm(pkmName);
 }
 
-document.getElementById("pkm_search_button").onclick = loadpkm;
+document.getElementById("pkm_search_button").onclick = SearchPkmByName;
 

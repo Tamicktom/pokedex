@@ -45,51 +45,6 @@ body {
   background-color: rgb(46, 179, 246);
 }
 
-.screen_holder {
-  margin: auto;
-  border-radius: 15px;
-  width: 90%;
-  height: 227px;
-  background: white;
-  margin-top: 29px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.screen {
-  border-radius: 15px;
-  width: 90%;
-  height: 200px;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.screen .left {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.screen .left img {
-  width: 90%;
-}
-.screen .right {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-}
-.screen .right ul {
-  margin-left: 5px;
-  color: white;
-  list-style-type: none;
-}
-
 .search {
   width: 100%;
   height: 100px;
@@ -110,6 +65,38 @@ body {
   border: none;
   outline: none;
   padding-left: 10px;
+}
+
+.buttons_holder {
+  width: 100%;
+  height: 200px;
+  margin-top: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.buttons_holder .left {
+  width: 50%;
+  height: 100%;
+}
+.buttons_holder .right {
+  width: 50%;
+  height: 100%;
+}
+.buttons_holder .right .up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 33%;
+}
+.buttons_holder .square_button {
+  width: 50px;
+  height: 50px;
+  background: rgb(50, 50, 50);
+  border: 0px;
+  color: white;
 }
 
 .numerals_holder {
@@ -175,11 +162,47 @@ body {
   height: 50%;
 }
 
-.buttons_holder {
-  width: 100%;
+.screen_holder {
+  margin: auto;
+  border-radius: 15px;
+  width: 90%;
+  height: 227px;
+  background: white;
+  margin-top: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
+  border-radius: 15px;
+  width: 90%;
   height: 200px;
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+.screen .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.screen .left img {
+  width: 90%;
+}
+.screen .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+.screen .right ul {
+  margin-left: 5px;
+  color: white;
+  list-style-type: none;
 }/*# sourceMappingURL=style.css.map */
