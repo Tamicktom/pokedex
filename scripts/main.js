@@ -8,6 +8,8 @@ function loadpkm(name) {
             console.log(data);
             // document.getElementById("Nome").innerHTML = data['name'];
             // document.getElementById("Número").innerHTML = data['id'];
+
+            select('#pkm_name').innerHTML = (data['name']).toUpperCase();
             let img = data.sprites.other["official-artwork"].front_default;
             document.getElementById("pkm_img").src = img;
         })
@@ -16,10 +18,20 @@ function loadpkm(name) {
         })
 
 }
-function SearchPkmByName(){
-   const pkmName = document.getElementById("pkm_search_input").value.toLowerCase();
-   loadpkm(pkmName);
+function SearchPkmByName() {
+    const pkmName = document.getElementById("pkm_search_input").value.toLowerCase();
+    loadpkm(pkmName);
 }
 
 document.getElementById("pkm_search_button").onclick = SearchPkmByName;
 
+
+//* Funções auxiliares
+function render(obj, text, add) {
+    if (typeof obj === 'string') obj = document.querySelector(obj);
+    add === true ? obj.innerHTML += text : obj.innerHTML = text;
+}
+
+function select(obj) {
+    return document.querySelector(obj);
+}
