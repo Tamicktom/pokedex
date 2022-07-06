@@ -12,7 +12,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script defer src="libs/vibrantjs/vibrant.min.js"></script>
   <script defer src="scripts/main.js"></script>
   <script defer src="scripts/style.js"></script>
   <link rel="stylesheet" href="css/style.css" />
@@ -42,7 +41,7 @@
   <main>
     <div class="w-100">
       <div class="screen_holder">
-        <div class="screen">
+        <div class="screen crt" id="screen">
           <div class="left">
             <img src="" id="pkm_img">
           </div>
@@ -50,7 +49,8 @@
             <ul>
               <li id="pkm_name"></li>
               <li id="pkm_id"></li>
-              <li id="pkm_type"></li>
+              <li id="pkm_type">
+              </li>
             </ul>
           </div>
         </div>
